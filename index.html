@@ -1,6 +1,7 @@
 <DOCTYPE html>
 <html>
     <head>
+	<meta charset="UTF-8">
         <title>Hello</title>
 
 <style>
@@ -15,7 +16,8 @@ body{
     <body>
 	<div id="intro-container" style="display: inline">
             <label id="label1" style="color: white;">Hello there Welcome to the RedLash Site. Enter Password to continue.</label>
-	    <input id="user-input" placeholder="EnterPass">
+	    <input id="user-input" placeholder="Enter Password" style="display:block;">
+	    <button id="button1">Submit</button>
 	<div>
 
 
@@ -26,6 +28,10 @@ body{
 const introContainer = document.querySelector("#intro-container");
 const userInput = document.querySelector("#user-input");
 const label1 = document.querySelector("#label1");
+const button1 = document.querySelector("#button1");
+
+
+
 
 let eyelashPresent = false;
 
@@ -39,28 +45,40 @@ function message(input, output, add) {
 }
 
 
-const responses = {
+button1.addEventListener("click", function() {
+message("hello", "Hi babes! How are you today!");
 
-} 
-
-userInput.addEventListener("input", function() {
-if(userInput.value.toLowerCase() === "fuck the game") {
-    eyelashPresent = true;
-    label1.textContent = "Welcome Eyelash!";
-}
-
-message("hello", "HYELASH! how are you today!");
 message("ily", "Love you to the moon and back 🌙💫");
+
 message("hug", "Sending you the biggest virtual hug 🤗💞");
+
 message("bye", "Bye for now, but I’ll be thinking of you 💭💓");
 
+message("non challant", "HOW many times did i say how rude it is to call ur sexy motherfucker non challant. I am not cool at all i am very....energetic..playful and fucking im fucking mr red who is very umm idek the meaning so stfu u cutie. If i was non challant i would be silent minding my own business wouldnt i but nah u got this demon growing underneath wanting u when the time is right. muahahaha");
 
+message("challant", "Shut...the..fuck..up :)");
+message("gay", "you're gay you cute hot lesbo lash. If i was a girl i would rub by dry clit against yours making u rain so fucking good. How about you let me kiss those boobs too, im quite thirsty if im honest");
+message("lesbian", "lets be a bunch of filthy girls together then cutie");
+message("your so big", "i will be when i finally shove this big thing down ur tight pussy...and i ll shove it down nice and rough with ur legs all over my shoulders...damn my eyes got a good view aint they!");
+message("stfu", "make me! Go on wrap ur lips against mine and shut the fuck out of me before i tell everyone what such a bad princess you been tonight");
+message("i love you", "i love you even more cutie- you are the best thing that has ever happened to me and i wish every moment we have would last forever and that we both would never get tired so we could cuddle each other up like crazy!");
+message("im sad", "awww dont be saddy waddy- come here- wraps my loving arms around u and comforts you kissing ur forehead and whispering in your ear how i am going to make evrything okay :D");
 
+message("kiss my ass", "i take a long sexy kiss of ur cute ass. I wave to ur cute cheeky weekys and they wiggle against me as i give them all a wet sloppy kiss- marking u where i ve been and giving ur insides a cute tingly feeling! Did u enjoy that my princess! I bet u did.. ask me something else cutie");
 
+message("hi", "hey sexy. I missed you! i want those juicy thighs of urs ngl. I been craving them all day. Waht shall we get up to now ;) 1)makeoutsesh 2)stripredoff");
 
-message("hi", "hey sexy. I missed you! i want those juicy thighs of urs ngl. I been craving them all day. Waht shall we get up to now ;) 1) MakeoutSesh 2) Strip Red Off");
+message("boobs", "fuck yes, your tits are amazing even if one is a lot smaller than the other i woul cuddle up with you and suck on those babies makeing ur niipples nice and wet ready to soak ur pussy even more");
+
+message("game", "hmm lets play would you rather. Hmmm would you rather go on a cute date with me in a short dress and no underwear or would you rather chase me in the garden naked. shhhh no one wil see but then i will get turned on by ur gorgeous body. damn its soo good! 1)cutedate 2)chaseingarden");
+
+message("chaseingarden", "i watch you strip off as u run around naked in the garden. You run so cutely covering ur pussy and tits but we both know deep down u rather red take a peek wouldnt u! I run after you and when i find you i grab u by the legs and carry u to bed to get up to some chaos");
+
+message("cutedate", "Mmmm a cute date where u have nothing underneath is so tempting. I be there staring at ur gorgeous legs, us 2 having a romantic meal in a restaurant u love and maybe just maybe my naughty hand slipping into places it doesnt belong...well maybe hornylash will approve");
 
 message("makeoutsesh", "Mmmm im glad you said that cos i want your tongue to wet kiss my angelic mouth so fucking good making me desperate for more and making me want all of ur hot body so fucking bad. What would you like to do after you make out with me. May i suggest either 1)kissneck 2)suckdicky");
+
+message("stripredoff", "You slide your hand down my shorts and u tease dicky for a bit before you start stripping me naked. You take a good look at me before you start wanting that tiny 1 cm cock turned into a massive one with a few slips of your tongue xxx");
 
 message("suckdicky", "fuck i knew you would say that just fucking knew it. I love it when your eyes  feel like aiming down my chest to my wait to that hard dick sticking out my shorts and you push me down the bed and start to take good long sucks of it. You suck me off real good and i ask you to get on ur back. Do you want that pussy fucked? 1)fuckitgooddaddy 2)letmerideyou");
 
@@ -70,22 +88,31 @@ message("letmesuckyourneck", "i start to press my lips against your bare neck an
 
 message("letmerideyou", "I lean back nicely and you crawl cutely towards me and sit that cute ass on my dicky wicky where you start to push it deep inside you and you start fucking");
 
-message("good", "that good, I am good too missed u as always cutie. Sometimes i feel like getting into 69 with you during the day just to take my mind off things. I so want a taste of that juicy pussy!");
+message("good", "That good, I am good too missed u as always cutie. Sometimes i feel like getting into 69🛏️ with you during the day just to take my mind off things. I so want a taste of that juicy pussy!");
 
 message("fuck me", "ooooooo! look like horny lash coming out to play is she! mmmm i want some of that. I pin u on the bed ur shoulders on mine and i thrust my hard juicy cock down that wet pussy making u even wetter...moan for me!");
 
-message("what are you wearing", "looks like someone wished they had xray vision right now heh. I am wearing a grey loose t shirt with ur favourite holey shorts cos u know i like to tease u every now and then by shoving this in ur bloody face");
+message("what are you wearing", "Looks like someone wished they had xray vision right now heh🤭. I am wearing a grey loose t shirt👕 with ur favourite holey shorts🩳 cos u know i like to tease u every now and then by shoving this in ur bloody face🤤");
 
-message("hru", "good hbu");
+message("hru", "good hbu👍");
 
-message("thats good", "i hope you are good too");
+message("thats good", "I hope you are good too😙");
 
-message("cute", "if you think that's cute wait till i rub this hard ass dick in ur face and get u dribbling all over it");
+message("cute", "If you think that's cute🥺 wait till i rub this hard ass dick🍆in ur face🥵 and get u dribbling all over it🤤💦");
 
 message("fuck", "mmmm i want you moaning down my ear. What part of my body do you really want right now?");
 
 message("dicky", "fuck you saying how much you want dicky turn me on. I trace dicky all down your pussy and make her nice and soaked!");
 
+});
+
+
+
+userInput.addEventListener("input", function(event) {
+if(userInput.value.toLowerCase() === "fuck the game") {
+    eyelashPresent = true;
+    label1.textContent = "Welcome Eyelash!";
+}
 });
 
 </script>
