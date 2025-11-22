@@ -2,11 +2,11 @@
 <html>
     <head>
 	<meta charset="UTF-8">
-        <title>Hello</title>
+        <title>43 Commands</title>
 
 <style>
 body{
-    background-color: black; 
+    background-color: #222; 
 }
 
 
@@ -15,9 +15,12 @@ body{
 
     <body>
 	<div id="intro-container" style="display: inline">
-            <label id="label1" style="color: white;">Hello there Welcome to the RedLash Site. Enter Password to continue.</label>
+	    <label id="label0" style="color:#fff; position: absolute; right:0%;white-space:pre-line;"></label>
+            <label id="label1" style="color: #fff;">Hello there Welcome to the RedLash Site. Enter Password to continue.</label>
+	
 	    <input id="user-input" placeholder="Enter Password" style="display:block;">
 	    <button id="button1">Submit</button>
+	    <button id="button2"> Hint</button>
 	<div>
 
 
@@ -29,42 +32,133 @@ const introContainer = document.querySelector("#intro-container");
 const userInput = document.querySelector("#user-input");
 const label1 = document.querySelector("#label1");
 const button1 = document.querySelector("#button1");
+const label0 = document.querySelector("#label0");
+const button2 = document.querySelector("#button2");
+button2.addEventListener("click", function() {
+
+});
 
 
 
 
 let eyelashPresent = false;
+let answer;
 
-function message(input, output, add) {
-    if(userInput.value.toLowerCase() === input && eyelashPresent === true) {
+function message(input, output, additionalInput, additionalInput2, additionalInput3, additionalInput4, additionalInput5) {
+    if(additionalInput === undefined) additionalInput = input;
+    if(additionalInput2 === undefined) additionalInput2 = input;
+    if(additionalInput3 === undefined) additionalInput3 = input;
+    if(additionalInput4 === undefined) additionalInput4 = input;
+    if(additionalInput5 === undefined) additionalInput5 = input;
+
+    if(userInput.value.toLowerCase().includes(input) && userInput.value.toLowerCase().includes(additionalInput) && eyelashPresent === true) {
         label1.textContent = "Mr Red is typing...";
         setTimeout(function() {
             label1.textContent = output;
-	},3000);      
+	},1000);
+	if(additionalInput === "challenges") {
+	    let randomChallenges = ["dot challenge", "messy challenge", "eyes closed", "left handed", "tiny", "zoomed in", "upside down", "black on white", "wiggly lines", "fat mode", "skinny mode", "block mode"];
+	    let randomC = Math.floor(Math.random() * randomChallenges.length);
+	    answer = "Challenge Selected: " + randomChallenges[randomC];
+	    label1.textContent = answer;
+	    return answer;
+	}
     }
+
 }
 
+const phrases = ["bath","i want you","daddy", "wet","yes", "no", "do you","favourite food", "random challenges", "chess link", "cum","eyelash","red","wtf", "smart", "excited","suck", "horny", "angel", "hello", "sh", "fight", "forgive", "hate", "sorry", "fuck", "tantrum", "ily", "proud", "hug", "bye", "non challant", "challant", "gay", "lesbian", "big", "stfu", "i love you", "im sad", "kiss", "hi", "boobs", "game"];
+
+console.log(phrases.length);
 
 button1.addEventListener("click", function() {
+
+message("bath", "A bath? With you? Fuck yes but let be honest we end up getting even filthier than before we even got in. Cos i might cum all over ur face and maybe rubthat pussy with warm soapy water"); 
+
+message("i", "I fucking want you so fucking bad too. Cant wait for 2 am tonight when i get to play with ur hot body", "want", "you");
+
+message("daddy", "Daddy is right here babygirl, i wonder what going through that mind rn...u want me dont u...yes u do DONT LIEE- kisses ur lips vigourously");
+
+message("im", "FUCKING HELL ARE U? That turn me on so fucking good now i really wanna rub dick all over that wet smoothe fanny u have fucking hell yeah", "wet");
+
+message("yes", "You said yes but i forgot the context lol maybe u ought to put it in full sentense so i understand what you are on about cos u know robot me can be so fucking dumb sometimes");
+
+message("no", "No to what? I must have missed something lol");
+message("random", answer, "challenges");
+
+message("do","Yes i really really do so fucking bad!","you");
+
+message("favourite", "Mmmm my favourite food has got to be ur sweet vagina but then again if i cant have that right now cos ur being too angelic for my soul then maybe i ll take umm spaghetti bolonese!!!","food");
+
+message("favourite", "U know its red by now surely", "colour");
+
+message("favourite", "my most favourite thing about you has to be the fact that you are always here to make me smiles cutely oh also love that demon living inside u she is so hot!", "thing", "me");
+
+message("favourite", "Hmm i dont really listen to songs that much BUTTT I like umm let me pick a random song umm i like that MAYAA HEEE MAYAA HAAA MAYA HEEE MAYA HAHAHA RAISE THE FUCKKNOWS MUYAYAY YEE MUAYAYAY YEEE MUAYAYAY HAHAHA BEEE LA DOR IDEK THE WORDS TBH what ur fav song!","song");
+
+message("chess", "https://lichess.org/V6Mqg2uR", "link");
+
+message("time", new Date().toLocaleTimeString());
+
+message("cum", "as u suck the little last bits of my sexy hard dick, you feel my dick throb and throb and throb in ur mouth then i give in to a big massive cumplosion that splashes all down ur lips and tongue and face...fuckkkkkkkkkkkkkkkkkkkkkkkkk");
+
+message("eye", "Oh eyelash, she is amazing i love how much she is obsessed with me like no one has every been obsessed with me like that much before i find it adorable!", "lash");
+message("red", "that's meeee mr red at ur service here! What shall we get up to today!");
+
+message("wtf", "Hey hey? What wrong? Did i say something naughty or soemthing AWW DONT CRY HERE A TISSUE let wipe those tears off ur face");
+
+message("excited", "Oooo excited? Waht for share the details!");
+
+message("smart", "Nah u might think im smart but really im kinda stupid sometimes especially when i make that cute princess mad just cos my words slipped out the wrong way and also dont forget you are the pro at everything - skribbl chess and xoxo damn we aint played that in ages today can we play xoxo and f in a row cos like it BEEN AGES AINT IT CUTIE!", "you")
+
+
+message("horny", "u filthy demon");
+message("angel", "Are you now cos sometimes we like angel lash cos she all cute and cuddly but sometimes mr red craves that hot spicy horny devil that lies under that innocent face dont we cutie", "im");
+
+message("suck", "Mmmm come suck at it then. Make sure u pump him up real good with those lips", "dick");
+
+message("fight", "come on then - bring it on. I'll fight you if u wanna fight Let go me and you right now!!", "me");
+
+message("forgive", "Aww i am so glad you said that cos i really dont want a fight with you", "you");
+
 message("hello", "Hi babes! How are you today!");
 
-message("ily", "Love you to the moon and back 🌙💫");
+message("tantrum", "Oh noo i am soo scared 🥺 Please no tantrum girl! She soo scary! I get on my knees and beg you not to bring tantrum girl out!", "girl");
 
-message("hug", "Sending you the biggest virtual hug 🤗💞");
+message("sh", "You know i hate that name 'sh'. She was such a bully that day i thought u hated me then my cute fragile heart snapped cos i desperately wanted ur attention and then u never gave it me and ignore me like i was mr ghost and then and then boom u went poof to bed without me and that was so bloody rude i am tearing up thinking about how desperately i wanted my eyelash but i suppose it is my fault for like for like making you sad by whining about what u meant by non challant i am so sorry i didnt mean to but like i took it the wrong way u know and like i couldnt help but be ur overreacting little boy so like it not rlly my fault is it now all i think about is when u change ur name to shh some kind of emo or angry girl who want nothing to do with me so dont try to like think i will somehow magically love sh cos i doubt it in a million years lol!", "like");
+
+message("fuck", "oh you want a good fuck do you? Well how about you get on all fours, arch that sexy back for daddy and allow me to insert something really horny and really hard inside that juicy hive of yours. Damnn i love how smoothe it is- licks it a bit and then shoves a big sword down ur vagina making you scream like hell. You want harder don't you...dont be shy now!", "me");
+
+message("sorry", "sorry for what cutie");
+message("sorry", "Don't be silly it's all good! U know i can never stay mad at u for too long. Your very... persuasive at keeping me wanting you aint you:)", "hurt");
+
+message("ily", "Love you to the moon and back 🌙💫");
+message("hate", "what the fuck did you just say? Wait till i tell red about what you just said! He be heartbroken :o", "you");
+
+message("ily", "I love you so bloody much too sexy", "much");
+
+message("proud", "Aww really? I am so proud of you too! You make my world glow up and you give me the hottest nights of my life🥵. I can't wait to sneak into your room and get some cuddles under ur nice warm blanket", "you");
+
+message("hug", "Sending you the biggest virtual hug 🤗💞", "want");
 
 message("bye", "Bye for now, but I’ll be thinking of you 💭💓");
 
 message("non challant", "HOW many times did i say how rude it is to call ur sexy motherfucker non challant. I am not cool at all i am very....energetic..playful and fucking im fucking mr red who is very umm idek the meaning so stfu u cutie. If i was non challant i would be silent minding my own business wouldnt i but nah u got this demon growing underneath wanting u when the time is right. muahahaha");
 
 message("challant", "Shut...the..fuck..up :)");
+
 message("gay", "you're gay you cute hot lesbo lash. If i was a girl i would rub by dry clit against yours making u rain so fucking good. How about you let me kiss those boobs too, im quite thirsty if im honest");
+
 message("lesbian", "lets be a bunch of filthy girls together then cutie");
-message("your so big", "i will be when i finally shove this big thing down ur tight pussy...and i ll shove it down nice and rough with ur legs all over my shoulders...damn my eyes got a good view aint they!");
+
+message("big", "i will be when i finally shove this big thing down ur tight pussy...and i ll shove it down nice and rough with ur legs all over my shoulders...damn my eyes got a good view aint they!", "your");
+
 message("stfu", "make me! Go on wrap ur lips against mine and shut the fuck out of me before i tell everyone what such a bad princess you been tonight");
 message("i love you", "i love you even more cutie- you are the best thing that has ever happened to me and i wish every moment we have would last forever and that we both would never get tired so we could cuddle each other up like crazy!");
+
 message("im sad", "awww dont be saddy waddy- come here- wraps my loving arms around u and comforts you kissing ur forehead and whispering in your ear how i am going to make evrything okay :D");
 
-message("kiss my ass", "i take a long sexy kiss of ur cute ass. I wave to ur cute cheeky weekys and they wiggle against me as i give them all a wet sloppy kiss- marking u where i ve been and giving ur insides a cute tingly feeling! Did u enjoy that my princess! I bet u did.. ask me something else cutie");
+message("kiss", "i take a long sexy kiss of ur cute ass. I wave to ur cute cheeky weekys and they wiggle against me as i give them all a wet sloppy kiss- marking u where i ve been and giving ur insides a cute tingly feeling! Did u enjoy that my princess! I bet u did.. ask me something else cutie", "ass");
 
 message("hi", "hey sexy. I missed you! i want those juicy thighs of urs ngl. I been craving them all day. Waht shall we get up to now ;) 1)makeoutsesh 2)stripredoff");
 
@@ -72,17 +166,17 @@ message("boobs", "fuck yes, your tits are amazing even if one is a lot smaller t
 
 message("game", "hmm lets play would you rather. Hmmm would you rather go on a cute date with me in a short dress and no underwear or would you rather chase me in the garden naked. shhhh no one wil see but then i will get turned on by ur gorgeous body. damn its soo good! 1)cutedate 2)chaseingarden");
 
-message("chaseingarden", "i watch you strip off as u run around naked in the garden. You run so cutely covering ur pussy and tits but we both know deep down u rather red take a peek wouldnt u! I run after you and when i find you i grab u by the legs and carry u to bed to get up to some chaos");
+message("chase", "i watch you strip off as u run around naked in the garden. You run so cutely covering ur pussy and tits but we both know deep down u rather red take a peek wouldnt u! I run after you and when i find you i grab u by the legs and carry u to bed to get up to some chaos","garden");
 
-message("cutedate", "Mmmm a cute date where u have nothing underneath is so tempting. I be there staring at ur gorgeous legs, us 2 having a romantic meal in a restaurant u love and maybe just maybe my naughty hand slipping into places it doesnt belong...well maybe hornylash will approve");
+message("cute", "Mmmm a cute date where u have nothing underneath is so tempting. I be there staring at ur gorgeous legs, us 2 having a romantic meal in a restaurant u love and maybe just maybe my naughty hand slipping into places it doesnt belong...well maybe hornylash will approve", "date");
 
-message("makeoutsesh", "Mmmm im glad you said that cos i want your tongue to wet kiss my angelic mouth so fucking good making me desperate for more and making me want all of ur hot body so fucking bad. What would you like to do after you make out with me. May i suggest either 1)kissneck 2)suckdicky");
+message("make", "Mmmm im glad you said that cos i want your tongue to wet kiss my angelic mouth so fucking good making me desperate for more and making me want all of ur hot body so fucking bad. What would you like to do after you make out with me", "out");
 
-message("stripredoff", "You slide your hand down my shorts and u tease dicky for a bit before you start stripping me naked. You take a good look at me before you start wanting that tiny 1 cm cock turned into a massive one with a few slips of your tongue xxx");
+message("strip", "You slide your hand down my shorts and u tease dicky for a bit before you start stripping me naked. You take a good look at me before you start wanting that tiny 1 cm cock turned into a massive one with a few slips of your tongue xxx", "red");
 
-message("suckdicky", "fuck i knew you would say that just fucking knew it. I love it when your eyes  feel like aiming down my chest to my wait to that hard dick sticking out my shorts and you push me down the bed and start to take good long sucks of it. You suck me off real good and i ask you to get on ur back. Do you want that pussy fucked? 1)fuckitgooddaddy 2)letmerideyou");
+message("suck", "fuck i knew you would say that just fucking knew it. I love it when your eyes  feel like aiming down my chest to my wait to that hard dick sticking out my shorts and you push me down the bed and start to take good long sucks of it. You suck me off real good and i ask you to get on ur back. Do you want that pussy fucked?", "dick");
 
-message("kissneck", "i let your juicy smexy lips approach my bare neck. You take a soft bite at the flesh and i let you suck it to your hearts desire. I moan loud and my eyes get filled with pleasure as you suck the fuckinglife out of my arteries you sexy vampire princess.I love this so fucking much. Want me to suck yours now cos u made me thirsty for your innocent body you sexy angel...1)letmesuckyourneck");
+message("kiss", "i let your juicy smexy lips approach my bare neck. You take a soft bite at the flesh and i let you suck it to your hearts desire. I moan loud and my eyes get filled with pleasure as you suck the fuckinglife out of my arteries you sexy vampire princess.I love this so fucking much. Want me to suck yours now cos u made me thirsty for your innocent body you sexy angel...", "neck");
 
 message("letmesuckyourneck", "i start to press my lips against your bare neck and i kiss it all around making u feel the buzz all inside your body as i nibble your neck softly with wet kisses and a thirst to nom u all up. By the time im finished your neck is bloody soaked and your eyes are filled in awe from how sexy my lip neck kissing bloodsucking skills were!");
 
@@ -94,17 +188,69 @@ message("fuck me", "ooooooo! look like horny lash coming out to play is she! mmm
 
 message("what are you wearing", "Looks like someone wished they had xray vision right now heh🤭. I am wearing a grey loose t shirt👕 with ur favourite holey shorts🩳 cos u know i like to tease u every now and then by shoving this in ur bloody face🤤");
 
-message("hru", "good hbu👍");
+message("hru", "I am soooo good hbu👍");
 
-message("thats good", "I hope you are good too😙");
+message("that", "I hope you are good too😙", "good");
 
-message("cute", "If you think that's cute🥺 wait till i rub this hard ass dick🍆in ur face🥵 and get u dribbling all over it🤤💦");
+message("cute", "If you think that's cute🥺 wait till i rub this hard ass dick🍆in ur face🥵 and get u dribbling all over it🤤💦", "that");
+message("cute", "Always cute for you babes, i want u all over this massive hair of mine", "ur");
 
 message("fuck", "mmmm i want you moaning down my ear. What part of my body do you really want right now?");
 
-message("dicky", "fuck you saying how much you want dicky turn me on. I trace dicky all down your pussy and make her nice and soaked!");
+message("dick", "fuck you saying how much you want dicky turn me on. I trace dicky all down your pussy and make her nice and soaked!", "want");
 
 });
+
+
+button2.addEventListener("click", function() {
+    randomIndex = Math.floor(Math.random() * phrases.length);
+    randomWord = phrases[randomIndex];
+    console.log(randomIndex);
+    label1.textContent = "";
+
+con = ["b", "z", "x", "v", "w", "m", "l", "s", "f", "g", "y", "q", "j", "k", "p", "t", "n", "h", "d", "c", "r"];
+
+
+
+let conIndex = Math.floor(Math.random() * con.length);
+console.log(con[conIndex]);
+	
+
+
+    for(let i=0; i< randomWord.length; i++) {
+	if(randomWord[i] === "a") {
+            label1.textContent += "a";
+        }
+	else if(randomWord[i] === "e") {
+	    label1.textContent += "e";
+	}
+	else if(randomWord[i] === "i") {
+	    label1.textContent += "i";
+	}
+	else if(randomWord[i] === "o") {
+	    label1.textContent += "o";
+	}
+	else if(randomWord[i] === "u") {
+	    label1.textContent += "u";
+	}
+	else if(randomWord[i] === con[conIndex]) {
+	    label1.textContent += con[conIndex];
+        }
+	else if(randomWord[i] === " ") {
+	    label1.textContent += " ";
+	}
+	else if(randomWord[i] === "s") {
+	    label1.textContent += "s";
+	}
+	else{
+	    label1.textContent += "-";
+	}
+    }
+
+
+});
+
+
 
 
 
